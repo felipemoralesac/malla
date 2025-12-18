@@ -90,6 +90,10 @@ select, input {
   color: var(--text);
 }
 
+input::placeholder, select::placeholder {
+  color: #6b7280;
+}
+
 button {
   border: 1px solid transparent;
   border-radius: 12px;
@@ -156,6 +160,11 @@ button.ghost {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  color: var(--text);
+}
+
+.chip.clickable {
+  cursor: pointer;
 }
 
 .adders .inline-form {
@@ -229,6 +238,84 @@ button.ghost {
   background: #f8d7da;
   color: #7c1f2b;
   border-color: #f1aeb5;
+}
+
+body[data-theme="midnight"] {
+  background-color: #0f172a;
+}
+
+body[data-theme="midnight"] .topbar {
+  background: #0f172a;
+  border-bottom-color: rgba(226, 232, 240, 0.08);
+}
+
+body[data-theme="midnight"] .block {
+  background: #1f2937;
+  border-color: rgba(226, 232, 240, 0.06);
+  color: #e5e7eb;
+}
+
+body[data-theme="midnight"] .semester {
+  background: #1f2937;
+  border-color: rgba(226, 232, 240, 0.08);
+}
+
+body[data-theme="midnight"] .course-card {
+  background: #253144;
+  border-color: rgba(226, 232, 240, 0.1);
+  color: #0a0a0a;
+}
+
+body[data-theme="midnight"] .course-card .name,
+body[data-theme="midnight"] .course-card .code {
+  color: #0a0a0a;
+  opacity: 1;
+}
+
+body[data-theme="midnight"] .course-card .code {
+  color: #f8fafc;
+}
+
+body[data-theme="midnight"] .course-card .name {
+  color: #f8fafc;
+}
+
+body[data-theme="midnight"] .course-card .credits {
+  color: #0a0a0a;
+}
+
+body[data-theme="midnight"] .course-card.locked {
+  opacity: 0.82;
+}
+
+body[data-theme="midnight"] .credit-count {
+  background: #253144;
+  color: #0a0a0a;
+}
+
+body[data-theme="midnight"] .course-menu .menu-item {
+  color: #1f2937;
+}
+
+body[data-theme="midnight"] .chip {
+  background: #f8fafc;
+  color: #0a0a0a;
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+body[data-theme="midnight"] .block .label {
+  color: #e5e7eb;
+  opacity: 0.9;
+}
+
+body[data-theme="midnight"] input,
+body[data-theme="midnight"] select,
+body[data-theme="midnight"] button.ghost {
+  color: #0a0a0a;
+}
+
+body[data-theme="midnight"] input::placeholder {
+  color: #0a0a0a;
 }
 
 .course-card {

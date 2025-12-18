@@ -10,7 +10,6 @@ const CAREERS = {
 };
 
 const THEMES = {
-  desert: { bg: "#f9f4e7", card: "#f4dfc2", text: "#2f2a28", accent: "#d9b26f" },
   mint: { bg: "#eef7f2", card: "#d7f0e3", text: "#1f2c2b", accent: "#8bc6a9" },
   sunset: { bg: "#fff4ec", card: "#fde1d3", text: "#331b1a", accent: "#f1a07f" },
   rose: { bg: "#fff0f5", card: "#ffd9e8", text: "#2d1a23", accent: "#f3a6c4" },
@@ -18,8 +17,9 @@ const THEMES = {
   sky: { bg: "#f0f7ff", card: "#dbeafd", text: "#1f2a38", accent: "#9ac3f5" },
   sage: { bg: "#f2f7f2", card: "#dfeee1", text: "#1f2b1f", accent: "#9ac9a3" },
   melon: { bg: "#fff7f0", card: "#ffe3d1", text: "#321f16", accent: "#f2b48a" },
-  sand: { bg: "#fbf6ec", card: "#f1e3c8", text: "#2f2619", accent: "#d7b98a" },
-  space: { bg: "#eef0ff", card: "#dfe4ff", text: "#1f2337", accent: "#9db7ff" }
+  space: { bg: "#eef0ff", card: "#dfe4ff", text: "#1f2337", accent: "#9db7ff" },
+  midnight: { bg: "#0f172a", card: "#1e293b", text: "#e2e8f0", accent: "#38bdf8" },
+  shiba: { bg: "#f5e9dc", card: "#fefefe", text: "#2c1f14", accent: "#e09c52", image: "foto.jpg" }
 };
 
 const FALLBACK_DATA = {
@@ -75,50 +75,75 @@ const FALLBACK_DATA = {
   },
   "ped-mat-uc": {
     "courses": {
-      "pm-1-0": { "id": "pm-1-0", "code": "MAT101", "name": "Didactica de la Matematica I", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm-1-1": { "id": "pm-1-1", "code": "MAT102", "name": "Algebra Basica", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm-1-2": { "id": "pm-1-2", "code": "MAT103", "name": "Geometria Basica", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm-1-3": { "id": "pm-1-3", "code": "PED101", "name": "Fundamentos Pedagogicos", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "pm-2-0": { "id": "pm-2-0", "code": "MAT201", "name": "Didactica de la Matematica II", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT101"] },
-      "pm-2-1": { "id": "pm-2-1", "code": "MAT202", "name": "Calculo I", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT102"] },
-      "pm-2-2": { "id": "pm-2-2", "code": "MAT203", "name": "Probabilidad y Estadistica I", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT102"] },
-      "pm-2-3": { "id": "pm-2-3", "code": "PED201", "name": "Observacion de Aula", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "pm-3-0": { "id": "pm-3-0", "code": "MAT301", "name": "Calculo II", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT202"] },
-      "pm-3-1": { "id": "pm-3-1", "code": "MAT302", "name": "Algebra Lineal", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT102"] },
-      "pm-3-2": { "id": "pm-3-2", "code": "MAT303", "name": "Didactica de la Geometria", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT103"] },
-      "pm-3-3": { "id": "pm-3-3", "code": "PED301", "name": "Practica Inicial", "credits": 10, "type": "general", "completed": false, "prereqs": ["PED201"] },
-      "pm-4-0": { "id": "pm-4-0", "code": "MAT401", "name": "Analisis Real", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT301"] },
-      "pm-4-1": { "id": "pm-4-1", "code": "MAT402", "name": "Probabilidad y Estadistica II", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT203"] },
-      "pm-4-2": { "id": "pm-4-2", "code": "MAT403", "name": "Teoria de Numeros", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT302"] },
-      "pm-4-3": { "id": "pm-4-3", "code": "PED401", "name": "Gestion de Aula", "credits": 10, "type": "general", "completed": false, "prereqs": ["PED301"] },
-      "pm-5-0": { "id": "pm-5-0", "code": "MAT501", "name": "Modelacion Matematica", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT401"] },
-      "pm-5-1": { "id": "pm-5-1", "code": "MAT502", "name": "Didactica de la Probabilidad", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT402"] },
-      "pm-5-2": { "id": "pm-5-2", "code": "PED501", "name": "Practica Intermedia", "credits": 10, "type": "general", "completed": false, "prereqs": ["PED401"] },
-      "pm-5-3": { "id": "pm-5-3", "code": "OPT501", "name": "Optativo de Educacion", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "pm-6-0": { "id": "pm-6-0", "code": "MAT601", "name": "Didactica y Tecnologia", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT501"] },
-      "pm-6-1": { "id": "pm-6-1", "code": "MAT602", "name": "Seminario de Contenidos", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT401"] },
-      "pm-6-2": { "id": "pm-6-2", "code": "PED601", "name": "Evaluacion para el Aprendizaje", "credits": 10, "type": "general", "completed": false, "prereqs": ["PED501"] },
-      "pm-6-3": { "id": "pm-6-3", "code": "OPT601", "name": "Optativo de Educacion II", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "pm-7-0": { "id": "pm-7-0", "code": "MAT701", "name": "Investigacion-Accion en Aula", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT601", "PED601"] },
-      "pm-7-1": { "id": "pm-7-1", "code": "PED701", "name": "Practica Profesional I", "credits": 15, "type": "general", "completed": false, "prereqs": ["PED501"] },
-      "pm-7-2": { "id": "pm-7-2", "code": "OPT701", "name": "Optativo Libre", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "pm-7-3": { "id": "pm-7-3", "code": "CAP701", "name": "Capstone de Diseno Didactico", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT602"] },
-      "pm-8-0": { "id": "pm-8-0", "code": "PED801", "name": "Practica Profesional II", "credits": 15, "type": "general", "completed": false, "prereqs": ["PED701"] },
-      "pm-8-1": { "id": "pm-8-1", "code": "MAT801", "name": "Seminario Final", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT701"] },
-      "pm-8-2": { "id": "pm-8-2", "code": "OPT801", "name": "Optativo Libre II", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "pm-8-3": { "id": "pm-8-3", "code": "PED802", "name": "Portafolio Docente", "credits": 10, "type": "general", "completed": false, "prereqs": ["PED701"] }
+      "pm1-0": { "id": "pm1-0", "code": "ECM500M", "name": "Introducción a la Enseñanza de la Matemática", "credits": 5, "type": "normal", "completed": false, "prereqs": [] },
+      "pm1-1": { "id": "pm1-1", "code": "MAT1104", "name": "Introducción al Cálculo", "credits": 12, "type": "normal", "completed": false, "prereqs": [] },
+      "pm1-2": { "id": "pm1-2", "code": "MAT1204", "name": "Introducción al Álgebra", "credits": 12, "type": "normal", "completed": false, "prereqs": [] },
+      "pm1-3": { "id": "pm1-3", "code": "MAT1304", "name": "Introducción a la Geometría", "credits": 12, "type": "normal", "completed": false, "prereqs": [] },
+      "pm1-4": { "id": "pm1-4", "code": "MAT0004", "name": "Taller de Matemáticas", "credits": 14, "type": "normal", "completed": false, "prereqs": [] },
+      "pm1-5": { "id": "pm1-5", "code": "VRA100C", "name": "Español", "credits": 0, "type": "general", "completed": false, "prereqs": [] },
+      "pm1-6": { "id": "pm1-6", "code": "VRA2000", "name": "English Test", "credits": 0, "type": "general", "completed": false, "prereqs": [] },
+      "pm1-7": { "id": "pm1-7", "code": "VRA4000", "name": "Integridad Académica en la UC", "credits": 0, "type": "general", "completed": false, "prereqs": [] },
+
+      "pm2-0": { "id": "pm2-0", "code": "EDU0311", "name": "Teoría de la Educación", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm2-1": { "id": "pm2-1", "code": "MAT1219", "name": "Álgebra Lineal", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
+      "pm2-2": { "id": "pm2-2", "code": "MAT1114", "name": "Cálculo I", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
+      "pm2-3": { "id": "pm2-3", "code": "FIL2001", "name": "Filosofía: ¿Para qué?", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+
+      "pm3-0": { "id": "pm3-0", "code": "MAT1124", "name": "Cálculo II", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
+      "pm3-1": { "id": "pm3-1", "code": "EYP1707", "name": "Introducción al Manejo y Exploración de Datos", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
+      "pm3-2": { "id": "pm3-2", "code": "EDU0165", "name": "Educación y Sociedad", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm3-3": { "id": "pm3-3", "code": "TTF", "name": "Formación Teológica", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
+
+      "pm4-0": { "id": "pm4-0", "code": "EDU0160", "name": "Desarrollo y Aprendizaje del Adolescente", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm4-1": { "id": "pm4-1", "code": "MAT1134", "name": "Cálculo III", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
+      "pm4-2": { "id": "pm4-2", "code": "EDU011M", "name": "Práctica 1: Educación Media en Matemática", "credits": 5, "type": "normal", "completed": false, "prereqs": [] },
+      "pm4-3": { "id": "pm4-3", "code": "EYP1610", "name": "Introducción a la Estadística", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
+      "pm4-4": { "id": "pm4-4", "code": "FG", "name": "Formación General", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
+
+      "pm5-0": { "id": "pm5-0", "code": "MAT2507", "name": "Introducción al Análisis", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm5-1": { "id": "pm5-1", "code": "MAT2227", "name": "Álgebra I", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm5-2": { "id": "pm5-2", "code": "EDU0317", "name": "Diversidad e Inclusión en Educación", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm5-3": { "id": "pm5-3", "code": "FG1", "name": "Formación General", "credits": 20, "type": "general", "completed": false, "prereqs": [] },
+
+      "pm6-0": { "id": "pm6-0", "code": "MAT2237", "name": "Álgebra II", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm6-1": { "id": "pm6-1", "code": "EDU0162", "name": "Currículum", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm6-2": { "id": "pm6-2", "code": "EDU0300", "name": "Didáctica de la Aritmética, del Álgebra y Funciones", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm6-3": { "id": "pm6-3", "code": "EDU012M", "name": "Práctica 2: Educación Media en Matemática", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm6-4": { "id": "pm6-4", "code": "FG2", "name": "Formación General", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
+
+      "pm7-0": { "id": "pm7-0", "code": "ECM232M", "name": "Geometría Euclidiana", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm7-1": { "id": "pm7-1", "code": "EDU0163", "name": "Evaluación en Educación Media", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm7-2": { "id": "pm7-2", "code": "EDU0301", "name": "Didáctica de la Geometría y de la Estadística", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm7-3": { "id": "pm7-3", "code": "EDU013M", "name": "Práctica 3: Educación Media en Matemática", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
+
+      "pm8-0": { "id": "pm8-0", "code": "ECM409M", "name": "Seminario de Investigación Aplicada a la Enseñanza/Aprendizaje de la Matemática", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm8-1": { "id": "pm8-1", "code": "ECM111M", "name": "Estadística y Probabilidad", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm8-2": { "id": "pm8-2", "code": "EDU0161", "name": "Gestión de Aulas Heterogéneas", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm8-3": { "id": "pm8-3", "code": "FG3", "name": "Formación General", "credits": 20, "type": "general", "completed": false, "prereqs": [] },
+
+      "pm9-0": { "id": "pm9-0", "code": "ECM201M", "name": "Pensamiento Computacional", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm9-1": { "id": "pm9-1", "code": "EDU0302", "name": "Didáctica de la Geometría 3D, Análisis y Estadística Inferencial", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm9-2": { "id": "pm9-2", "code": "EDU014M", "name": "Práctica Profesional 1: Educación Media en Matemática", "credits": 20, "type": "normal", "completed": false, "prereqs": [] },
+      "pm9-3": { "id": "pm9-3", "code": "OPT", "name": "Optativo", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
+
+      "pm10-0": { "id": "pm10-0", "code": "MAT2006", "name": "Historia de la Matemática", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm10-1": { "id": "pm10-1", "code": "ECM202M", "name": "Modelación Matemática", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+      "pm10-2": { "id": "pm10-2", "code": "EDU015M", "name": "Práctica Profesional 2: Educación Media en Matemática", "credits": 20, "type": "normal", "completed": false, "prereqs": [] },
+      "pm10-3": { "id": "pm10-3", "code": "EDU556", "name": "Dimensión Ética de la Profesión Docente", "credits": 5, "type": "normal", "completed": false, "prereqs": [] }
     },
     "semesters": [
-      { "id": "sem-1", "title": "Semestre 1", "courseIds": ["pm-1-0", "pm-1-1", "pm-1-2", "pm-1-3"] },
-      { "id": "sem-2", "title": "Semestre 2", "courseIds": ["pm-2-0", "pm-2-1", "pm-2-2", "pm-2-3"] },
-      { "id": "sem-3", "title": "Semestre 3", "courseIds": ["pm-3-0", "pm-3-1", "pm-3-2", "pm-3-3"] },
-      { "id": "sem-4", "title": "Semestre 4", "courseIds": ["pm-4-0", "pm-4-1", "pm-4-2", "pm-4-3"] },
-      { "id": "sem-5", "title": "Semestre 5", "courseIds": ["pm-5-0", "pm-5-1", "pm-5-2", "pm-5-3"] },
-      { "id": "sem-6", "title": "Semestre 6", "courseIds": ["pm-6-0", "pm-6-1", "pm-6-2", "pm-6-3"] },
-      { "id": "sem-7", "title": "Semestre 7", "courseIds": ["pm-7-0", "pm-7-1", "pm-7-2", "pm-7-3"] },
-      { "id": "sem-8", "title": "Semestre 8", "courseIds": ["pm-8-0", "pm-8-1", "pm-8-2", "pm-8-3"] }
+      { "id": "sem-1", "title": "Semestre 1", "courseIds": ["pm1-0", "pm1-1", "pm1-2", "pm1-3", "pm1-4", "pm1-5", "pm1-6", "pm1-7"] },
+      { "id": "sem-2", "title": "Semestre 2", "courseIds": ["pm2-0", "pm2-1", "pm2-2", "pm2-3"] },
+      { "id": "sem-3", "title": "Semestre 3", "courseIds": ["pm3-0", "pm3-1", "pm3-2", "pm3-3"] },
+      { "id": "sem-4", "title": "Semestre 4", "courseIds": ["pm4-0", "pm4-1", "pm4-2", "pm4-3", "pm4-4"] },
+      { "id": "sem-5", "title": "Semestre 5", "courseIds": ["pm5-0", "pm5-1", "pm5-2", "pm5-3"] },
+      { "id": "sem-6", "title": "Semestre 6", "courseIds": ["pm6-0", "pm6-1", "pm6-2", "pm6-3", "pm6-4"] },
+      { "id": "sem-7", "title": "Semestre 7", "courseIds": ["pm7-0", "pm7-1", "pm7-2", "pm7-3"] },
+      { "id": "sem-8", "title": "Semestre 8", "courseIds": ["pm8-0", "pm8-1", "pm8-2", "pm8-3"] },
+      { "id": "sem-9", "title": "Semestre 9", "courseIds": ["pm9-0", "pm9-1", "pm9-2", "pm9-3"] },
+      { "id": "sem-10", "title": "Semestre 10", "courseIds": ["pm10-0", "pm10-1", "pm10-2", "pm10-3"] }
     ],
-    "semesterOrder": ["sem-1", "sem-2", "sem-3", "sem-4", "sem-5", "sem-6", "sem-7", "sem-8"]
+    "semesterOrder": ["sem-1", "sem-2", "sem-3", "sem-4", "sem-5", "sem-6", "sem-7", "sem-8", "sem-9", "sem-10"]
   }
 };
 
@@ -130,7 +155,9 @@ let state = {
   colors: { ...THEMES.mint },
   dismissedAlerts: {},
   zoom: 1,
-  deleteMode: false
+  deleteMode: false,
+  currentSemIndex: 0,
+  currentPeriodIndex: 0
 };
 
 const els = {
@@ -140,6 +167,8 @@ const els = {
   statCredits: document.getElementById("statCredits"),
   statDone: document.getElementById("statDone"),
   statPending: document.getElementById("statPending"),
+  statSemProgress: document.getElementById("statSemProgress"),
+  statPeriodProgress: document.getElementById("statPeriodProgress"),
   courseForm: document.getElementById("courseForm"),
   semesterSelect: document.getElementById("semesterSelect"),
   addSemester: document.getElementById("addSemester"),
@@ -151,7 +180,8 @@ const els = {
   submitBtn: document.querySelector("#courseForm button[type='submit']"),
   zoomOut: document.getElementById("zoomOut"),
   zoomReset: document.getElementById("zoomReset"),
-  zoomIn: document.getElementById("zoomIn")
+  zoomIn: document.getElementById("zoomIn"),
+  downloadConfig: document.getElementById("downloadConfig")
 };
 
 let dragContext = null;
@@ -240,6 +270,14 @@ function attachGlobalEvents() {
     applyZoom();
     persist();
   });
+
+  els.downloadConfig.addEventListener("click", () => {
+    downloadConfig();
+  });
+
+  els.statPeriodProgress.addEventListener("click", () => {
+    cyclePeriodProgress();
+  });
 }
 
 async function loadCareer(careerId, reset = false) {
@@ -289,6 +327,16 @@ function applyColors() {
   document.documentElement.style.setProperty("--text", text);
   document.documentElement.style.setProperty("--accent", accent);
   document.documentElement.style.setProperty("--accent-soft", lighten(accent, 0.35));
+  const themeId = detectTheme(state.colors);
+  document.body.setAttribute("data-theme", themeId || "custom");
+  if (themeId === "shiba") {
+    document.body.style.backgroundImage = "url('foto.jpg')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundAttachment = "fixed";
+    document.body.style.backgroundRepeat = "no-repeat";
+  } else {
+    document.body.style.backgroundImage = "none";
+  }
 }
 
 function applyZoom() {
@@ -608,6 +656,22 @@ function persist() {
   );
 }
 
+function downloadConfig() {
+  const payload = {
+    careerId: state.careerId,
+    courses: state.courses,
+    semesters: state.semesters,
+    semesterOrder: state.semesterOrder
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `${state.careerId}-config.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(link.href);
+}
 // Versiones limpias para textos sin caracteres raros
 function updateStatsSafe() {
   const allCourses = Object.values(state.courses);
@@ -619,6 +683,12 @@ function updateStatsSafe() {
   els.statCredits.textContent = `Creditos cursados: ${doneCredits}/${totalCredits}`;
   els.statDone.textContent = `Aprobados: ${done.length}`;
   els.statPending.textContent = `Pendientes: ${pending}`;
+
+  const overall = computeOverallProgress();
+  els.statSemProgress.textContent = `Malla total: ${overall.percent}%`;
+
+  const periodInfo = computePeriodProgress();
+  els.statPeriodProgress.textContent = `Seleccionar periodo (Año ${periodInfo.year}): ${periodInfo.percent}%`;
 }
 
 function maybeWarnCreditsSafe(semId, credits) {
@@ -633,6 +703,34 @@ function maybeWarnCreditsSafe(semId, credits) {
     els.toast.classList.add("hidden");
     persist();
   };
+}
+
+function computePeriodProgress() {
+  const totalSems = state.semesterOrder.length;
+  const totalPeriods = Math.max(1, Math.ceil(totalSems / 2));
+  if (state.currentPeriodIndex > totalPeriods - 1) state.currentPeriodIndex = totalPeriods - 1;
+  const start = state.currentPeriodIndex * 2;
+  const semIds = state.semesterOrder.slice(start, start + 2);
+  const ids = semIds.flatMap((sid) => state.semesters.find((s) => s.id === sid)?.courseIds || []);
+  const total = ids.length;
+  const done = ids.filter((id) => state.courses[id]?.completed).length;
+  const percent = total ? Math.round((done * 100) / total) : 0;
+  const year = state.currentPeriodIndex + 1;
+  return { year, percent };
+}
+
+function cyclePeriodProgress() {
+  const totalPeriods = Math.max(1, Math.ceil(state.semesterOrder.length / 2));
+  state.currentPeriodIndex = (state.currentPeriodIndex + 1) % totalPeriods;
+  updateStatsSafe();
+}
+
+function computeOverallProgress() {
+  const allCourses = Object.values(state.courses);
+  const total = allCourses.length;
+  const done = allCourses.filter((c) => c.completed).length;
+  const percent = total ? Math.round((done * 100) / total) : 0;
+  return { percent };
 }
 
 function toggleDeleteMode() {
