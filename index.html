@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla interactiva</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="dot"></div>
+      <div>
+        <p class="eyebrow">Malla interactiva</p>
+        <h1>Planifica tus semestres</h1>
+      </div>
+    </div>
+    <div class="selectors">
+      <label>
+        Carrera
+        <select id="careerSelect"></select>
+      </label>
+      <label>
+        Tema
+        <select id="themeSelect">
+          <option value="mint" selected>Menta suave</option>
+          <option value="desert">Desierto pastel</option>
+          <option value="sunset">Atardecer</option>
+          <option value="rose">Rosa tenue</option>
+          <option value="lavender">Lavanda</option>
+          <option value="sky">Cielo suave</option>
+          <option value="sage">Salvia</option>
+          <option value="melon">Melon</option>
+          <option value="sand">Arena</option>
+          <option value="space">Espacio pastel</option>
+        </select>
+      </label>
+      <button id="resetCareer" class="ghost">Reiniciar carrera</button>
+    </div>
+  </header>
+
+  <section class="controls">
+    <div class="block">
+      <p class="label">Estado</p>
+      <div class="stats">
+        <div id="statCredits" class="chip"></div>
+        <div id="statDone" class="chip"></div>
+        <div id="statPending" class="chip"></div>
+      </div>
+    </div>
+    <div class="block adders">
+      <div>
+        <p class="label">Nuevo ramo</p>
+        <form id="courseForm" class="inline-form">
+          <input name="code" placeholder="Sigla" required />
+          <input name="name" placeholder="Nombre" required />
+          <input name="credits" type="number" min="0" max="40" placeholder="Créditos" required />
+          <input name="prereqs" placeholder="Prerrequisitos (siglas, coma)" />
+          <select name="type">
+            <option value="normal">Normal</option>
+            <option value="general">General</option>
+          </select>
+          <select name="semester" id="semesterSelect"></select>
+          <button type="submit">Agregar</button>
+        </form>
+      </div>
+      <div class="actions">
+        <button id="addSemester">+ Semestre</button>
+        <button id="removeSemester" class="ghost">- Semestre</button>
+      </div>
+    </div>
+    <div class="block">
+      <p class="label">Vista</p>
+      <div class="actions">
+        <button id="zoomOut" class="ghost">-</button>
+        <button id="zoomReset">Original</button>
+        <button id="zoomIn" class="ghost">+</button>
+      </div>
+    </div>
+  </section>
+
+  <main id="board"></main>
+
+  <div id="toast" class="toast hidden">
+    <span id="toastMsg"></span>
+    <button id="toastOk">OK</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

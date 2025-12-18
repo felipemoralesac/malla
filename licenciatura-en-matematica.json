@@ -1,0 +1,471 @@
+{
+  "courses": {
+    "c-0-0": {
+      "id": "c-0-0",
+      "code": "MAT1104",
+      "name": "Introducción al Cálculo",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-0-1": {
+      "id": "c-0-1",
+      "code": "MAT1304",
+      "name": "Introducción a la Geometría",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-0-2": {
+      "id": "c-0-2",
+      "code": "MAT1204",
+      "name": "Introducción al Álgebra",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-0-3": {
+      "id": "c-0-3",
+      "code": "MAT0004",
+      "name": "Taller de Matemáticas",
+      "credits": 14,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-0-4": {
+      "id": "c-0-4",
+      "code": "VRA100C",
+      "name": "Test de Comunicación Escrita",
+      "credits": 0,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-0-5": {
+      "id": "c-0-5",
+      "code": "VRA2000",
+      "name": "Test de Inglés",
+      "credits": 0,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-1-0": {
+      "id": "c-1-0",
+      "code": "MAT1114",
+      "name": "Cálculo I",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1104"
+      ]
+    },
+    "c-1-1": {
+      "id": "c-1-1",
+      "code": "MAT1214",
+      "name": "Introducción al Álgebra Lineal",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1204",
+        "MAT1304"
+      ]
+    },
+    "c-1-2": {
+      "id": "c-1-2",
+      "code": "IIC1103",
+      "name": "Introducción a la Programación",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-1-3": {
+      "id": "c-1-3",
+      "code": "FOGE",
+      "name": "Formación General",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-2-0": {
+      "id": "c-2-0",
+      "code": "MAT1124",
+      "name": "Cálculo II",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1114"
+      ]
+    },
+    "c-2-1": {
+      "id": "c-2-1",
+      "code": "MAT1224",
+      "name": "Álgebra Lineal",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1214"
+      ]
+    },
+    "c-2-2": {
+      "id": "c-2-2",
+      "code": "MAT1314",
+      "name": "Introducción a la Combinatoria",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "IIC1103",
+        "MAT1214"
+      ]
+    },
+    "c-2-3": {
+      "id": "c-2-3",
+      "code": "FIL2001",
+      "name": "Filosofía: ¿Para qué?",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-3-0": {
+      "id": "c-3-0",
+      "code": "MAT1134",
+      "name": "Cálculo III",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1124",
+        "MAT0004"
+      ]
+    },
+    "c-3-1": {
+      "id": "c-3-1",
+      "code": "MAT2234",
+      "name": "Álgebra Abstracta I",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1224"
+      ]
+    },
+    "c-3-2": {
+      "id": "c-3-2",
+      "code": "EYP2104",
+      "name": "Estadística para Matemáticas",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1314",
+        "MAT1134"
+      ]
+    },
+    "c-3-3": {
+      "id": "c-3-3",
+      "code": "FOGE1",
+      "name": "Formación General",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-4-0": {
+      "id": "c-4-0",
+      "code": "MAT2514",
+      "name": "Análisis Real",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1134"
+      ]
+    },
+    "c-4-1": {
+      "id": "c-4-1",
+      "code": "MAT2244",
+      "name": "Álgebra Abstracta II",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT2234"
+      ]
+    },
+    "c-4-2": {
+      "id": "c-4-2",
+      "code": "MAT2704",
+      "name": "Variable Compleja",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1134",
+        "MAT1214"
+      ]
+    },
+    "c-4-3": {
+      "id": "c-4-3",
+      "code": "FOGE2",
+      "name": "Formación General",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-5-0": {
+      "id": "c-5-0",
+      "code": "MAT2534",
+      "name": "Teoría de la Integración",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT2514"
+      ]
+    },
+    "c-5-1": {
+      "id": "c-5-1",
+      "code": "MAT2544",
+      "name": "Topología",
+      "credits": 15,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT2234",
+        "MAT2534"
+      ]
+    },
+    "c-5-2": {
+      "id": "c-5-2",
+      "code": "MAT2504",
+      "name": "Ecuaciones Diferenciales Ordinarias",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT1134"
+      ]
+    },
+    "c-5-3": {
+      "id": "c-5-3",
+      "code": "FOGE3",
+      "name": "Formación Teológica",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-6-0": {
+      "id": "c-6-0",
+      "code": "OPDEPR",
+      "name": "Optativo de Profundización",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT2514",
+        "MAT2244",
+        "MAT2704"
+      ]
+    },
+    "c-6-1": {
+      "id": "c-6-1",
+      "code": "OPDEPR1",
+      "name": "Optativo de Profundización",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT2514",
+        "MAT2244",
+        "MAT2704"
+      ]
+    },
+    "c-6-2": {
+      "id": "c-6-2",
+      "code": "OPDEPR2",
+      "name": "Optativo de Profundización",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT2514",
+        "MAT2244",
+        "MAT2704"
+      ]
+    },
+    "c-6-3": {
+      "id": "c-6-3",
+      "code": "FOGE4",
+      "name": "Formación General",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-7-0": {
+      "id": "c-7-0",
+      "code": "MAT3094",
+      "name": "Taller de Trabajo Matemático",
+      "credits": 20,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT2534",
+        "MAT2244"
+      ]
+    },
+    "c-7-1": {
+      "id": "c-7-1",
+      "code": "OPDEPR3",
+      "name": "Optativo de Profundización",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT2534",
+        "MAT2544",
+        "MAT2504"
+      ]
+    },
+    "c-7-2": {
+      "id": "c-7-2",
+      "code": "OPDEPR4",
+      "name": "Optativo de Profundización",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": [
+        "MAT2534",
+        "MAT2544",
+        "MAT2504"
+      ]
+    },
+    "c-7-3": {
+      "id": "c-7-3",
+      "code": "FOGE5",
+      "name": "Formación General",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "c-ws42sre": {
+      "id": "c-ws42sre",
+      "code": "FOGE6",
+      "name": "Formación General",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    }
+  },
+  "semesters": [
+    {
+      "id": "sem-1",
+      "title": "Semestre 1",
+      "courseIds": [
+        "c-0-0",
+        "c-0-1",
+        "c-0-2",
+        "c-0-3",
+        "c-0-4",
+        "c-0-5"
+      ]
+    },
+    {
+      "id": "sem-2",
+      "title": "Semestre 2",
+      "courseIds": [
+        "c-1-0",
+        "c-1-1",
+        "c-1-2",
+        "c-1-3"
+      ]
+    },
+    {
+      "id": "sem-3",
+      "title": "Semestre 3",
+      "courseIds": [
+        "c-2-0",
+        "c-2-1",
+        "c-2-2",
+        "c-2-3"
+      ]
+    },
+    {
+      "id": "sem-4",
+      "title": "Semestre 4",
+      "courseIds": [
+        "c-3-0",
+        "c-3-1",
+        "c-3-2",
+        "c-3-3"
+      ]
+    },
+    {
+      "id": "sem-5",
+      "title": "Semestre 5",
+      "courseIds": [
+        "c-4-0",
+        "c-4-1",
+        "c-4-2",
+        "c-4-3"
+      ]
+    },
+    {
+      "id": "sem-6",
+      "title": "Semestre 6",
+      "courseIds": [
+        "c-5-0",
+        "c-5-1",
+        "c-5-2",
+        "c-5-3"
+      ]
+    },
+    {
+      "id": "sem-7",
+      "title": "Semestre 7",
+      "courseIds": [
+        "c-6-0",
+        "c-6-1",
+        "c-6-2",
+        "c-6-3",
+        "c-ws42sre"
+      ]
+    },
+    {
+      "id": "sem-8",
+      "title": "Semestre 8",
+      "courseIds": [
+        "c-7-0",
+        "c-7-1",
+        "c-7-2",
+        "c-7-3"
+      ]
+    }
+  ],
+  "semesterOrder": [
+    "sem-1",
+    "sem-2",
+    "sem-3",
+    "sem-4",
+    "sem-5",
+    "sem-6",
+    "sem-7",
+    "sem-8"
+  ]
+}

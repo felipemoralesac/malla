@@ -1,0 +1,303 @@
+{
+  "courses": {
+    "pm-1-0": {
+      "id": "pm-1-0",
+      "code": "MAT101",
+      "name": "Didactica de la Matematica I",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "pm-1-1": {
+      "id": "pm-1-1",
+      "code": "MAT102",
+      "name": "Algebra Basica",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "pm-1-2": {
+      "id": "pm-1-2",
+      "code": "MAT103",
+      "name": "Geometria Basica",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": []
+    },
+    "pm-1-3": {
+      "id": "pm-1-3",
+      "code": "PED101",
+      "name": "Fundamentos Pedagogicos",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "pm-2-0": {
+      "id": "pm-2-0",
+      "code": "MAT201",
+      "name": "Didactica de la Matematica II",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT101"]
+    },
+    "pm-2-1": {
+      "id": "pm-2-1",
+      "code": "MAT202",
+      "name": "Calculo I",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT102"]
+    },
+    "pm-2-2": {
+      "id": "pm-2-2",
+      "code": "MAT203",
+      "name": "Probabilidad y Estadistica I",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT102"]
+    },
+    "pm-2-3": {
+      "id": "pm-2-3",
+      "code": "PED201",
+      "name": "Observacion de Aula",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "pm-3-0": {
+      "id": "pm-3-0",
+      "code": "MAT301",
+      "name": "Calculo II",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT202"]
+    },
+    "pm-3-1": {
+      "id": "pm-3-1",
+      "code": "MAT302",
+      "name": "Algebra Lineal",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT102"]
+    },
+    "pm-3-2": {
+      "id": "pm-3-2",
+      "code": "MAT303",
+      "name": "Didactica de la Geometria",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT103"]
+    },
+    "pm-3-3": {
+      "id": "pm-3-3",
+      "code": "PED301",
+      "name": "Practica Inicial",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": ["PED201"]
+    },
+    "pm-4-0": {
+      "id": "pm-4-0",
+      "code": "MAT401",
+      "name": "Analisis Real",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT301"]
+    },
+    "pm-4-1": {
+      "id": "pm-4-1",
+      "code": "MAT402",
+      "name": "Probabilidad y Estadistica II",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT203"]
+    },
+    "pm-4-2": {
+      "id": "pm-4-2",
+      "code": "MAT403",
+      "name": "Teoria de Numeros",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT302"]
+    },
+    "pm-4-3": {
+      "id": "pm-4-3",
+      "code": "PED401",
+      "name": "Gestion de Aula",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": ["PED301"]
+    },
+    "pm-5-0": {
+      "id": "pm-5-0",
+      "code": "MAT501",
+      "name": "Modelacion Matematica",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT401"]
+    },
+    "pm-5-1": {
+      "id": "pm-5-1",
+      "code": "MAT502",
+      "name": "Didactica de la Probabilidad",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT402"]
+    },
+    "pm-5-2": {
+      "id": "pm-5-2",
+      "code": "PED501",
+      "name": "Practica Intermedia",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": ["PED401"]
+    },
+    "pm-5-3": {
+      "id": "pm-5-3",
+      "code": "OPT501",
+      "name": "Optativo de Educacion",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "pm-6-0": {
+      "id": "pm-6-0",
+      "code": "MAT601",
+      "name": "Didactica y Tecnologia",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT501"]
+    },
+    "pm-6-1": {
+      "id": "pm-6-1",
+      "code": "MAT602",
+      "name": "Seminario de Contenidos",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT401"]
+    },
+    "pm-6-2": {
+      "id": "pm-6-2",
+      "code": "PED601",
+      "name": "Evaluacion para el Aprendizaje",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": ["PED501"]
+    },
+    "pm-6-3": {
+      "id": "pm-6-3",
+      "code": "OPT601",
+      "name": "Optativo de Educacion II",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "pm-7-0": {
+      "id": "pm-7-0",
+      "code": "MAT701",
+      "name": "Investigacion-Accion en Aula",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT601", "PED601"]
+    },
+    "pm-7-1": {
+      "id": "pm-7-1",
+      "code": "PED701",
+      "name": "Practica Profesional I",
+      "credits": 15,
+      "type": "general",
+      "completed": false,
+      "prereqs": ["PED501"]
+    },
+    "pm-7-2": {
+      "id": "pm-7-2",
+      "code": "OPT701",
+      "name": "Optativo Libre",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "pm-7-3": {
+      "id": "pm-7-3",
+      "code": "CAP701",
+      "name": "Capstone de Diseno Didactico",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT602"]
+    },
+    "pm-8-0": {
+      "id": "pm-8-0",
+      "code": "PED801",
+      "name": "Practica Profesional II",
+      "credits": 15,
+      "type": "general",
+      "completed": false,
+      "prereqs": ["PED701"]
+    },
+    "pm-8-1": {
+      "id": "pm-8-1",
+      "code": "MAT801",
+      "name": "Seminario Final",
+      "credits": 10,
+      "type": "normal",
+      "completed": false,
+      "prereqs": ["MAT701"]
+    },
+    "pm-8-2": {
+      "id": "pm-8-2",
+      "code": "OPT801",
+      "name": "Optativo Libre II",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": []
+    },
+    "pm-8-3": {
+      "id": "pm-8-3",
+      "code": "PED802",
+      "name": "Portafolio Docente",
+      "credits": 10,
+      "type": "general",
+      "completed": false,
+      "prereqs": ["PED701"]
+    }
+  },
+  "semesters": [
+    { "id": "sem-1", "title": "Semestre 1", "courseIds": ["pm-1-0", "pm-1-1", "pm-1-2", "pm-1-3"] },
+    { "id": "sem-2", "title": "Semestre 2", "courseIds": ["pm-2-0", "pm-2-1", "pm-2-2", "pm-2-3"] },
+    { "id": "sem-3", "title": "Semestre 3", "courseIds": ["pm-3-0", "pm-3-1", "pm-3-2", "pm-3-3"] },
+    { "id": "sem-4", "title": "Semestre 4", "courseIds": ["pm-4-0", "pm-4-1", "pm-4-2", "pm-4-3"] },
+    { "id": "sem-5", "title": "Semestre 5", "courseIds": ["pm-5-0", "pm-5-1", "pm-5-2", "pm-5-3"] },
+    { "id": "sem-6", "title": "Semestre 6", "courseIds": ["pm-6-0", "pm-6-1", "pm-6-2", "pm-6-3"] },
+    { "id": "sem-7", "title": "Semestre 7", "courseIds": ["pm-7-0", "pm-7-1", "pm-7-2", "pm-7-3"] },
+    { "id": "sem-8", "title": "Semestre 8", "courseIds": ["pm-8-0", "pm-8-1", "pm-8-2", "pm-8-3"] }
+  ],
+  "semesterOrder": ["sem-1", "sem-2", "sem-3", "sem-4", "sem-5", "sem-6", "sem-7", "sem-8"]
+}
