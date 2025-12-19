@@ -1,10 +1,10 @@
 const CAREERS = {
   "lic-mat": {
-    name: "Licenciatura en Matemática",
+    name: "Licenciatura en Matematica",
     file: "data/licenciatura-en-matematica.json"
   },
   "ped-mat-uc": {
-    name: "Pedagogía en Matemática UC",
+    name: "Pedagogia en Matematica UC",
     file: "data/pedagogia-en-matematica-uc.json"
   }
 };
@@ -23,128 +23,1088 @@ const THEMES = {
 };
 
 const FALLBACK_DATA = {
-  "lic-mat": {
-    "courses": {
-      "c-0-0": { "id": "c-0-0", "code": "MAT1104", "name": "Introduccion al Calculo", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
-      "c-0-1": { "id": "c-0-1", "code": "MAT1304", "name": "Introduccion a la Geometria", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
-      "c-0-2": { "id": "c-0-2", "code": "MAT1204", "name": "Introduccion al Algebra", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
-      "c-0-3": { "id": "c-0-3", "code": "MAT0004", "name": "Taller de Matematicas", "credits": 14, "type": "normal", "completed": false, "prereqs": [] },
-      "c-0-4": { "id": "c-0-4", "code": "VRA100C", "name": "Test de Comunicacion Escrita", "credits": 0, "type": "normal", "completed": false, "prereqs": [] },
-      "c-0-5": { "id": "c-0-5", "code": "VRA2000", "name": "Test de Ingles", "credits": 0, "type": "general", "completed": false, "prereqs": [] },
-      "c-1-0": { "id": "c-1-0", "code": "MAT1114", "name": "Calculo I", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT1104"] },
-      "c-1-1": { "id": "c-1-1", "code": "MAT1214", "name": "Introduccion al Algebra Lineal", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT1204", "MAT1304"] },
-      "c-1-2": { "id": "c-1-2", "code": "IIC1103", "name": "Introduccion a la Programacion", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "c-1-3": { "id": "c-1-3", "code": "FOGE", "name": "Formacion General", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "c-2-0": { "id": "c-2-0", "code": "MAT1124", "name": "Calculo II", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT1114"] },
-      "c-2-1": { "id": "c-2-1", "code": "MAT1224", "name": "Algebra Lineal", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT1214"] },
-      "c-2-2": { "id": "c-2-2", "code": "MAT1314", "name": "Introduccion a la Combinatoria", "credits": 10, "type": "normal", "completed": false, "prereqs": ["IIC1103", "MAT1214"] },
-      "c-2-3": { "id": "c-2-3", "code": "FIL2001", "name": "Filosofia: Para que?", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "c-3-0": { "id": "c-3-0", "code": "MAT1134", "name": "Calculo III", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT1124", "MAT0004"] },
-      "c-3-1": { "id": "c-3-1", "code": "MAT2234", "name": "Algebra Abstracta I", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT1224"] },
-      "c-3-2": { "id": "c-3-2", "code": "EYP2104", "name": "Estadistica para Matematicas", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT1314", "MAT1134"] },
-      "c-3-3": { "id": "c-3-3", "code": "FOGE1", "name": "Formacion General", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "c-4-0": { "id": "c-4-0", "code": "MAT2514", "name": "Analisis Real", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT1134"] },
-      "c-4-1": { "id": "c-4-1", "code": "MAT2244", "name": "Algebra Abstracta II", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT2234"] },
-      "c-4-2": { "id": "c-4-2", "code": "MAT2704", "name": "Variable Compleja", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT1134", "MAT1214"] },
-      "c-4-3": { "id": "c-4-3", "code": "FOGE2", "name": "Formacion General", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "c-5-0": { "id": "c-5-0", "code": "MAT2534", "name": "Teoria de la Integracion", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT2514"] },
-      "c-5-1": { "id": "c-5-1", "code": "MAT2544", "name": "Topologia", "credits": 15, "type": "normal", "completed": false, "prereqs": ["MAT2234", "MAT2534"] },
-      "c-5-2": { "id": "c-5-2", "code": "MAT2504", "name": "Ecuaciones Diferenciales Ordinarias", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT1134"] },
-      "c-5-3": { "id": "c-5-3", "code": "FOGE3", "name": "Formacion Teologica", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "c-6-0": { "id": "c-6-0", "code": "OPDEPR", "name": "Optativo de Profundizacion", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT2514", "MAT2244", "MAT2704"] },
-      "c-6-1": { "id": "c-6-1", "code": "OPDEPR1", "name": "Optativo de Profundizacion", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT2514", "MAT2244", "MAT2704"] },
-      "c-6-2": { "id": "c-6-2", "code": "OPDEPR2", "name": "Optativo de Profundizacion", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT2514", "MAT2244", "MAT2704"] },
-      "c-6-3": { "id": "c-6-3", "code": "FOGE4", "name": "Formacion General", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "c-7-0": { "id": "c-7-0", "code": "MAT3094", "name": "Taller de Trabajo Matematico", "credits": 20, "type": "normal", "completed": false, "prereqs": ["MAT2534", "MAT2244"] },
-      "c-7-1": { "id": "c-7-1", "code": "OPDEPR3", "name": "Optativo de Profundizacion", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT2534", "MAT2544", "MAT2504"] },
-      "c-7-2": { "id": "c-7-2", "code": "OPDEPR4", "name": "Optativo de Profundizacion", "credits": 10, "type": "normal", "completed": false, "prereqs": ["MAT2534", "MAT2544", "MAT2504"] },
-      "c-7-3": { "id": "c-7-3", "code": "FOGE5", "name": "Formacion General", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
-      "c-ws42sre": { "id": "c-ws42sre", "code": "FOGE6", "name": "Formacion General", "credits": 10, "type": "general", "completed": false, "prereqs": [] }
-    },
-    "semesters": [
-      { "id": "sem-1", "title": "Semestre 1", "courseIds": ["c-0-0", "c-0-1", "c-0-2", "c-0-3", "c-0-4", "c-0-5"] },
-      { "id": "sem-2", "title": "Semestre 2", "courseIds": ["c-1-0", "c-1-1", "c-1-2", "c-1-3"] },
-      { "id": "sem-3", "title": "Semestre 3", "courseIds": ["c-2-0", "c-2-1", "c-2-2", "c-2-3"] },
-      { "id": "sem-4", "title": "Semestre 4", "courseIds": ["c-3-0", "c-3-1", "c-3-2", "c-3-3"] },
-      { "id": "sem-5", "title": "Semestre 5", "courseIds": ["c-4-0", "c-4-1", "c-4-2", "c-4-3"] },
-      { "id": "sem-6", "title": "Semestre 6", "courseIds": ["c-5-0", "c-5-1", "c-5-2", "c-5-3"] },
-      { "id": "sem-7", "title": "Semestre 7", "courseIds": ["c-6-0", "c-6-1", "c-6-2", "c-6-3", "c-ws42sre"] },
-      { "id": "sem-8", "title": "Semestre 8", "courseIds": ["c-7-0", "c-7-1", "c-7-2", "c-7-3"] }
-    ],
-    "semesterOrder": ["sem-1", "sem-2", "sem-3", "sem-4", "sem-5", "sem-6", "sem-7", "sem-8"]
-  },
-  "ped-mat-uc": {
-    "courses": {
-      "pm1-0": { "id": "pm1-0", "code": "ECM500M", "name": "Introducción a la Enseñanza de la Matemática", "credits": 5, "type": "normal", "completed": false, "prereqs": [] },
-      "pm1-1": { "id": "pm1-1", "code": "MAT1104", "name": "Introducción al Cálculo", "credits": 12, "type": "normal", "completed": false, "prereqs": [] },
-      "pm1-2": { "id": "pm1-2", "code": "MAT1204", "name": "Introducción al Álgebra", "credits": 12, "type": "normal", "completed": false, "prereqs": [] },
-      "pm1-3": { "id": "pm1-3", "code": "MAT1304", "name": "Introducción a la Geometría", "credits": 12, "type": "normal", "completed": false, "prereqs": [] },
-      "pm1-4": { "id": "pm1-4", "code": "MAT0004", "name": "Taller de Matemáticas", "credits": 14, "type": "normal", "completed": false, "prereqs": [] },
-      "pm1-5": { "id": "pm1-5", "code": "VRA100C", "name": "Español", "credits": 0, "type": "general", "completed": false, "prereqs": [] },
-      "pm1-6": { "id": "pm1-6", "code": "VRA2000", "name": "English Test", "credits": 0, "type": "general", "completed": false, "prereqs": [] },
-      "pm1-7": { "id": "pm1-7", "code": "VRA4000", "name": "Integridad Académica en la UC", "credits": 0, "type": "general", "completed": false, "prereqs": [] },
+    "lic-mat":  {
+                    "courses":  {
+                                    "c-0-0":  {
+                                                  "id":  "c-0-0",
+                                                  "code":  "MAT1104",
+                                                  "name":  "Introduccion al Calculo",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
 
-      "pm2-0": { "id": "pm2-0", "code": "EDU0311", "name": "Teoría de la Educación", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm2-1": { "id": "pm2-1", "code": "MAT1219", "name": "Álgebra Lineal", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
-      "pm2-2": { "id": "pm2-2", "code": "MAT1114", "name": "Cálculo I", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
-      "pm2-3": { "id": "pm2-3", "code": "FIL2001", "name": "Filosofía: ¿Para qué?", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
+                                                              ]
+                                              },
+                                    "c-0-1":  {
+                                                  "id":  "c-0-1",
+                                                  "code":  "MAT1304",
+                                                  "name":  "Introduccion a la Geometria",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
 
-      "pm3-0": { "id": "pm3-0", "code": "MAT1124", "name": "Cálculo II", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
-      "pm3-1": { "id": "pm3-1", "code": "EYP1707", "name": "Introducción al Manejo y Exploración de Datos", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
-      "pm3-2": { "id": "pm3-2", "code": "EDU0165", "name": "Educación y Sociedad", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm3-3": { "id": "pm3-3", "code": "TTF", "name": "Formación Teológica", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
+                                                              ]
+                                              },
+                                    "c-0-2":  {
+                                                  "id":  "c-0-2",
+                                                  "code":  "MAT1204",
+                                                  "name":  "Introduccion al Algebra",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
 
-      "pm4-0": { "id": "pm4-0", "code": "EDU0160", "name": "Desarrollo y Aprendizaje del Adolescente", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm4-1": { "id": "pm4-1", "code": "MAT1134", "name": "Cálculo III", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
-      "pm4-2": { "id": "pm4-2", "code": "EDU011M", "name": "Práctica 1: Educación Media en Matemática", "credits": 5, "type": "normal", "completed": false, "prereqs": [] },
-      "pm4-3": { "id": "pm4-3", "code": "EYP1610", "name": "Introducción a la Estadística", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
-      "pm4-4": { "id": "pm4-4", "code": "FG", "name": "Formación General", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
+                                                              ]
+                                              },
+                                    "c-0-3":  {
+                                                  "id":  "c-0-3",
+                                                  "code":  "MAT0004",
+                                                  "name":  "Taller de Matematicas",
+                                                  "credits":  14,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
 
-      "pm5-0": { "id": "pm5-0", "code": "MAT2507", "name": "Introducción al Análisis", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm5-1": { "id": "pm5-1", "code": "MAT2227", "name": "Álgebra I", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm5-2": { "id": "pm5-2", "code": "EDU0317", "name": "Diversidad e Inclusión en Educación", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm5-3": { "id": "pm5-3", "code": "FG1", "name": "Formación General", "credits": 20, "type": "general", "completed": false, "prereqs": [] },
+                                                              ]
+                                              },
+                                    "c-1-0":  {
+                                                  "id":  "c-1-0",
+                                                  "code":  "MAT1114",
+                                                  "name":  "Calculo I",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1104"
+                                                              ]
+                                              },
+                                    "c-1-1":  {
+                                                  "id":  "c-1-1",
+                                                  "code":  "MAT1214",
+                                                  "name":  "Introduccion al Algebra Lineal",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1204",
+                                                                  "MAT1304"
+                                                              ]
+                                              },
+                                    "c-1-2":  {
+                                                  "id":  "c-1-2",
+                                                  "code":  "IIC1103",
+                                                  "name":  "Introduccion a la Programacion",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
 
-      "pm6-0": { "id": "pm6-0", "code": "MAT2237", "name": "Álgebra II", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm6-1": { "id": "pm6-1", "code": "EDU0162", "name": "Currículum", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm6-2": { "id": "pm6-2", "code": "EDU0300", "name": "Didáctica de la Aritmética, del Álgebra y Funciones", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm6-3": { "id": "pm6-3", "code": "EDU012M", "name": "Práctica 2: Educación Media en Matemática", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm6-4": { "id": "pm6-4", "code": "FG2", "name": "Formación General", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
+                                                              ]
+                                              },
+                                    "c-1-3":  {
+                                                  "id":  "c-1-3",
+                                                  "code":  "FOGE",
+                                                  "name":  "Formacion General",
+                                                  "credits":  10,
+                                                  "type":  "general",
+                                                  "completed":  false,
+                                                  "prereqs":  [
 
-      "pm7-0": { "id": "pm7-0", "code": "ECM232M", "name": "Geometría Euclidiana", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm7-1": { "id": "pm7-1", "code": "EDU0163", "name": "Evaluación en Educación Media", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm7-2": { "id": "pm7-2", "code": "EDU0301", "name": "Didáctica de la Geometría y de la Estadística", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm7-3": { "id": "pm7-3", "code": "EDU013M", "name": "Práctica 3: Educación Media en Matemática", "credits": 15, "type": "normal", "completed": false, "prereqs": [] },
+                                                              ]
+                                              },
+                                    "c-2-0":  {
+                                                  "id":  "c-2-0",
+                                                  "code":  "MAT1124",
+                                                  "name":  "Calculo II",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1114"
+                                                              ]
+                                              },
+                                    "c-2-1":  {
+                                                  "id":  "c-2-1",
+                                                  "code":  "MAT1224",
+                                                  "name":  "Algebra Lineal",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1214"
+                                                              ]
+                                              },
+                                    "c-2-2":  {
+                                                  "id":  "c-2-2",
+                                                  "code":  "MAT1314",
+                                                  "name":  "Introduccion a la Combinatoria",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "IIC1103",
+                                                                  "MAT1214"
+                                                              ]
+                                              },
+                                    "c-2-3":  {
+                                                  "id":  "c-2-3",
+                                                  "code":  "FIL2001",
+                                                  "name":  "Filosofia: Para que?",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
 
-      "pm8-0": { "id": "pm8-0", "code": "ECM409M", "name": "Seminario de Investigación Aplicada a la Enseñanza/Aprendizaje de la Matemática", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm8-1": { "id": "pm8-1", "code": "ECM111M", "name": "Estadística y Probabilidad", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm8-2": { "id": "pm8-2", "code": "EDU0161", "name": "Gestión de Aulas Heterogéneas", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm8-3": { "id": "pm8-3", "code": "FG3", "name": "Formación General", "credits": 20, "type": "general", "completed": false, "prereqs": [] },
+                                                              ]
+                                              },
+                                    "c-3-0":  {
+                                                  "id":  "c-3-0",
+                                                  "code":  "MAT1134",
+                                                  "name":  "Calculo III",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1124",
+                                                                  "MAT0004"
+                                                              ]
+                                              },
+                                    "c-3-1":  {
+                                                  "id":  "c-3-1",
+                                                  "code":  "MAT2234",
+                                                  "name":  "Algebra Abstracta I",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1224"
+                                                              ]
+                                              },
+                                    "c-3-2":  {
+                                                  "id":  "c-3-2",
+                                                  "code":  "EYP2104",
+                                                  "name":  "Estadistica para Matematicas",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1314",
+                                                                  "MAT1134"
+                                                              ]
+                                              },
+                                    "c-3-3":  {
+                                                  "id":  "c-3-3",
+                                                  "code":  "FOGE1",
+                                                  "name":  "Formacion General",
+                                                  "credits":  10,
+                                                  "type":  "general",
+                                                  "completed":  false,
+                                                  "prereqs":  [
 
-      "pm9-0": { "id": "pm9-0", "code": "ECM201M", "name": "Pensamiento Computacional", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm9-1": { "id": "pm9-1", "code": "EDU0302", "name": "Didáctica de la Geometría 3D, Análisis y Estadística Inferencial", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm9-2": { "id": "pm9-2", "code": "EDU014M", "name": "Práctica Profesional 1: Educación Media en Matemática", "credits": 20, "type": "normal", "completed": false, "prereqs": [] },
-      "pm9-3": { "id": "pm9-3", "code": "OPT", "name": "Optativo", "credits": 10, "type": "general", "completed": false, "prereqs": [] },
+                                                              ]
+                                              },
+                                    "c-4-0":  {
+                                                  "id":  "c-4-0",
+                                                  "code":  "MAT2514",
+                                                  "name":  "Analisis Real",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1134"
+                                                              ]
+                                              },
+                                    "c-4-1":  {
+                                                  "id":  "c-4-1",
+                                                  "code":  "MAT2244",
+                                                  "name":  "Algebra Abstracta II",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT2234"
+                                                              ]
+                                              },
+                                    "c-4-2":  {
+                                                  "id":  "c-4-2",
+                                                  "code":  "MAT2704",
+                                                  "name":  "Variable Compleja",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1134",
+                                                                  "MAT1214"
+                                                              ]
+                                              },
+                                    "c-4-3":  {
+                                                  "id":  "c-4-3",
+                                                  "code":  "FOGE2",
+                                                  "name":  "Formacion General",
+                                                  "credits":  10,
+                                                  "type":  "general",
+                                                  "completed":  false,
+                                                  "prereqs":  [
 
-      "pm10-0": { "id": "pm10-0", "code": "MAT2006", "name": "Historia de la Matemática", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm10-1": { "id": "pm10-1", "code": "ECM202M", "name": "Modelación Matemática", "credits": 10, "type": "normal", "completed": false, "prereqs": [] },
-      "pm10-2": { "id": "pm10-2", "code": "EDU015M", "name": "Práctica Profesional 2: Educación Media en Matemática", "credits": 20, "type": "normal", "completed": false, "prereqs": [] },
-      "pm10-3": { "id": "pm10-3", "code": "EDU556", "name": "Dimensión Ética de la Profesión Docente", "credits": 5, "type": "normal", "completed": false, "prereqs": [] }
-    },
-    "semesters": [
-      { "id": "sem-1", "title": "Semestre 1", "courseIds": ["pm1-0", "pm1-1", "pm1-2", "pm1-3", "pm1-4", "pm1-5", "pm1-6", "pm1-7"] },
-      { "id": "sem-2", "title": "Semestre 2", "courseIds": ["pm2-0", "pm2-1", "pm2-2", "pm2-3"] },
-      { "id": "sem-3", "title": "Semestre 3", "courseIds": ["pm3-0", "pm3-1", "pm3-2", "pm3-3"] },
-      { "id": "sem-4", "title": "Semestre 4", "courseIds": ["pm4-0", "pm4-1", "pm4-2", "pm4-3", "pm4-4"] },
-      { "id": "sem-5", "title": "Semestre 5", "courseIds": ["pm5-0", "pm5-1", "pm5-2", "pm5-3"] },
-      { "id": "sem-6", "title": "Semestre 6", "courseIds": ["pm6-0", "pm6-1", "pm6-2", "pm6-3", "pm6-4"] },
-      { "id": "sem-7", "title": "Semestre 7", "courseIds": ["pm7-0", "pm7-1", "pm7-2", "pm7-3"] },
-      { "id": "sem-8", "title": "Semestre 8", "courseIds": ["pm8-0", "pm8-1", "pm8-2", "pm8-3"] },
-      { "id": "sem-9", "title": "Semestre 9", "courseIds": ["pm9-0", "pm9-1", "pm9-2", "pm9-3"] },
-      { "id": "sem-10", "title": "Semestre 10", "courseIds": ["pm10-0", "pm10-1", "pm10-2", "pm10-3"] }
-    ],
-    "semesterOrder": ["sem-1", "sem-2", "sem-3", "sem-4", "sem-5", "sem-6", "sem-7", "sem-8", "sem-9", "sem-10"]
-  }
+                                                              ]
+                                              },
+                                    "c-5-0":  {
+                                                  "id":  "c-5-0",
+                                                  "code":  "MAT2534",
+                                                  "name":  "Teoria de la Integracion",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT2514"
+                                                              ]
+                                              },
+                                    "c-5-1":  {
+                                                  "id":  "c-5-1",
+                                                  "code":  "MAT2544",
+                                                  "name":  "Topologia",
+                                                  "credits":  15,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT2234",
+                                                                  "MAT2534"
+                                                              ]
+                                              },
+                                    "c-5-2":  {
+                                                  "id":  "c-5-2",
+                                                  "code":  "MAT2504",
+                                                  "name":  "Ecuaciones Diferenciales Ordinarias",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT1134"
+                                                              ]
+                                              },
+                                    "c-5-3":  {
+                                                  "id":  "c-5-3",
+                                                  "code":  "FOGE3",
+                                                  "name":  "Formacion Teologica",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+
+                                                              ]
+                                              },
+                                    "c-6-0":  {
+                                                  "id":  "c-6-0",
+                                                  "code":  "OPDEPR",
+                                                  "name":  "Optativo de Profundizacion",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT2514",
+                                                                  "MAT2244",
+                                                                  "MAT2704"
+                                                              ]
+                                              },
+                                    "c-6-1":  {
+                                                  "id":  "c-6-1",
+                                                  "code":  "OPDEPR1",
+                                                  "name":  "Optativo de Profundizacion",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT2514",
+                                                                  "MAT2244",
+                                                                  "MAT2704"
+                                                              ]
+                                              },
+                                    "c-6-2":  {
+                                                  "id":  "c-6-2",
+                                                  "code":  "OPDEPR2",
+                                                  "name":  "Optativo de Profundizacion",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT2514",
+                                                                  "MAT2244",
+                                                                  "MAT2704"
+                                                              ]
+                                              },
+                                    "c-6-3":  {
+                                                  "id":  "c-6-3",
+                                                  "code":  "FOGE4",
+                                                  "name":  "Formacion General",
+                                                  "credits":  10,
+                                                  "type":  "general",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+
+                                                              ]
+                                              },
+                                    "c-7-0":  {
+                                                  "id":  "c-7-0",
+                                                  "code":  "MAT3094",
+                                                  "name":  "Taller de Trabajo Matematico",
+                                                  "credits":  20,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT2534",
+                                                                  "MAT2244"
+                                                              ]
+                                              },
+                                    "c-7-1":  {
+                                                  "id":  "c-7-1",
+                                                  "code":  "OPDEPR3",
+                                                  "name":  "Optativo de Profundizacion",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT2534",
+                                                                  "MAT2544",
+                                                                  "MAT2504"
+                                                              ]
+                                              },
+                                    "c-7-2":  {
+                                                  "id":  "c-7-2",
+                                                  "code":  "OPDEPR4",
+                                                  "name":  "Optativo de Profundizacion",
+                                                  "credits":  10,
+                                                  "type":  "normal",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+                                                                  "MAT2534",
+                                                                  "MAT2544",
+                                                                  "MAT2504"
+                                                              ]
+                                              },
+                                    "c-7-3":  {
+                                                  "id":  "c-7-3",
+                                                  "code":  "FOGE5",
+                                                  "name":  "Formacion General",
+                                                  "credits":  10,
+                                                  "type":  "general",
+                                                  "completed":  false,
+                                                  "prereqs":  [
+
+                                                              ]
+                                              },
+                                    "c-ws42sre":  {
+                                                      "id":  "c-ws42sre",
+                                                      "code":  "FOGE6",
+                                                      "name":  "Formacion General",
+                                                      "credits":  10,
+                                                      "type":  "general",
+                                                      "completed":  false,
+                                                      "prereqs":  [
+
+                                                                  ]
+                                                  }
+                                },
+                    "semesters":  [
+                                      {
+                                          "id":  "sem-1",
+                                          "title":  "Semestre 1",
+                                          "courseIds":  [
+                                                            "c-0-0",
+                                                            "c-0-1",
+                                                            "c-0-2",
+                                                            "c-0-3"
+                                                        ]
+                                      },
+                                      {
+                                          "id":  "sem-2",
+                                          "title":  "Semestre 2",
+                                          "courseIds":  [
+                                                            "c-1-0",
+                                                            "c-1-1",
+                                                            "c-1-2",
+                                                            "c-1-3"
+                                                        ]
+                                      },
+                                      {
+                                          "id":  "sem-3",
+                                          "title":  "Semestre 3",
+                                          "courseIds":  [
+                                                            "c-2-0",
+                                                            "c-2-1",
+                                                            "c-2-2",
+                                                            "c-2-3"
+                                                        ]
+                                      },
+                                      {
+                                          "id":  "sem-4",
+                                          "title":  "Semestre 4",
+                                          "courseIds":  [
+                                                            "c-3-0",
+                                                            "c-3-1",
+                                                            "c-3-2",
+                                                            "c-3-3"
+                                                        ]
+                                      },
+                                      {
+                                          "id":  "sem-5",
+                                          "title":  "Semestre 5",
+                                          "courseIds":  [
+                                                            "c-4-0",
+                                                            "c-4-1",
+                                                            "c-4-2",
+                                                            "c-4-3"
+                                                        ]
+                                      },
+                                      {
+                                          "id":  "sem-6",
+                                          "title":  "Semestre 6",
+                                          "courseIds":  [
+                                                            "c-5-0",
+                                                            "c-5-1",
+                                                            "c-5-2",
+                                                            "c-5-3"
+                                                        ]
+                                      },
+                                      {
+                                          "id":  "sem-7",
+                                          "title":  "Semestre 7",
+                                          "courseIds":  [
+                                                            "c-6-0",
+                                                            "c-6-1",
+                                                            "c-6-2",
+                                                            "c-6-3",
+                                                            "c-ws42sre"
+                                                        ]
+                                      },
+                                      {
+                                          "id":  "sem-8",
+                                          "title":  "Semestre 8",
+                                          "courseIds":  [
+                                                            "c-7-0",
+                                                            "c-7-1",
+                                                            "c-7-2",
+                                                            "c-7-3"
+                                                        ]
+                                      }
+                                  ],
+                    "semesterOrder":  [
+                                          "sem-1",
+                                          "sem-2",
+                                          "sem-3",
+                                          "sem-4",
+                                          "sem-5",
+                                          "sem-6",
+                                          "sem-7",
+                                          "sem-8"
+                                      ]
+                },
+    "ped-mat-uc":  {
+                       "courses":  {
+                                       "pm1-0":  {
+                                                     "id":  "pm1-0",
+                                                     "code":  "ECM500M",
+                                                     "name":  "Introducción a la Enseñanza de la Matemática",
+                                                     "credits":  5,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm1-1":  {
+                                                     "id":  "pm1-1",
+                                                     "code":  "MAT1104",
+                                                     "name":  "Introducción al Cálculo",
+                                                     "credits":  12,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm1-2":  {
+                                                     "id":  "pm1-2",
+                                                     "code":  "MAT1204",
+                                                     "name":  "Introducción al Álgebra",
+                                                     "credits":  12,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm1-3":  {
+                                                     "id":  "pm1-3",
+                                                     "code":  "MAT1304",
+                                                     "name":  "Introducción a la Geometría",
+                                                     "credits":  12,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm1-4":  {
+                                                     "id":  "pm1-4",
+                                                     "code":  "MAT0004",
+                                                     "name":  "Taller de Matemáticas",
+                                                     "credits":  14,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm2-0":  {
+                                                     "id":  "pm2-0",
+                                                     "code":  "EDU0311",
+                                                     "name":  "Teoría de la Educación",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm2-1":  {
+                                                     "id":  "pm2-1",
+                                                     "code":  "MAT1219",
+                                                     "name":  "Álgebra Lineal",
+                                                     "credits":  15,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT1204"
+                                                                 ]
+                                                 },
+                                       "pm2-2":  {
+                                                     "id":  "pm2-2",
+                                                     "code":  "MAT1114",
+                                                     "name":  "Cálculo I",
+                                                     "credits":  15,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT1104"
+                                                                 ]
+                                                 },
+                                       "pm2-3":  {
+                                                     "id":  "pm2-3",
+                                                     "code":  "FIL2001",
+                                                     "name":  "Filosofía: ¿Para qué?",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm3-0":  {
+                                                     "id":  "pm3-0",
+                                                     "code":  "MAT1124",
+                                                     "name":  "Cálculo II",
+                                                     "credits":  15,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT1114"
+                                                                 ]
+                                                 },
+                                       "pm3-1":  {
+                                                     "id":  "pm3-1",
+                                                     "code":  "EYP1707",
+                                                     "name":  "Introducción al Manejo y Exploración de Datos",
+                                                     "credits":  15,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm3-2":  {
+                                                     "id":  "pm3-2",
+                                                     "code":  "EDU0165",
+                                                     "name":  "Educación y Sociedad",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm3-3":  {
+                                                     "id":  "pm3-3",
+                                                     "code":  "TTF",
+                                                     "name":  "Formación Teológica",
+                                                     "credits":  10,
+                                                     "type":  "general",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm4-0":  {
+                                                     "id":  "pm4-0",
+                                                     "code":  "EDU0160",
+                                                     "name":  "Desarrollo y Aprendizaje del Adolescente",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm4-1":  {
+                                                     "id":  "pm4-1",
+                                                     "code":  "MAT1134",
+                                                     "name":  "Cálculo III",
+                                                     "credits":  15,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT1124"
+                                                                 ]
+                                                 },
+                                       "pm4-2":  {
+                                                     "id":  "pm4-2",
+                                                     "code":  "EDU011M",
+                                                     "name":  "Práctica 1: Educación Media en Matemática",
+                                                     "credits":  5,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "EDU0160 (Estar cursando)"
+                                                                 ]
+                                                 },
+                                       "pm4-3":  {
+                                                     "id":  "pm4-3",
+                                                     "code":  "EYP1610",
+                                                     "name":  "Introducción a la Estadística",
+                                                     "credits":  15,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT1114"
+                                                                 ]
+                                                 },
+                                       "pm4-4":  {
+                                                     "id":  "pm4-4",
+                                                     "code":  "FG",
+                                                     "name":  "Formación General",
+                                                     "credits":  10,
+                                                     "type":  "general",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm5-0":  {
+                                                     "id":  "pm5-0",
+                                                     "code":  "MAT2507",
+                                                     "name":  "Introducción al Análisis",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT1134"
+                                                                 ]
+                                                 },
+                                       "pm5-1":  {
+                                                     "id":  "pm5-1",
+                                                     "code":  "MAT2227",
+                                                     "name":  "Álgebra I",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT1219"
+                                                                 ]
+                                                 },
+                                       "pm5-2":  {
+                                                     "id":  "pm5-2",
+                                                     "code":  "EDU0317",
+                                                     "name":  "Diversidad e Inclusión en Educación",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm5-3":  {
+                                                     "id":  "pm5-3",
+                                                     "code":  "FG1",
+                                                     "name":  "Formación General",
+                                                     "credits":  20,
+                                                     "type":  "general",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm6-0":  {
+                                                     "id":  "pm6-0",
+                                                     "code":  "MAT2237",
+                                                     "name":  "Álgebra II",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT2227"
+                                                                 ]
+                                                 },
+                                       "pm6-1":  {
+                                                     "id":  "pm6-1",
+                                                     "code":  "EDU0162",
+                                                     "name":  "Currículum",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm6-2":  {
+                                                     "id":  "pm6-2",
+                                                     "code":  "EDU0300",
+                                                     "name":  "Didáctica de la Aritmética, del Álgebra y Funciones",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "EDU0165",
+                                                                     "EDU0160",
+                                                                     "EDU0317",
+                                                                     "EDU0162(C)",
+                                                                     "EDU012M(C)"
+                                                                 ]
+                                                 },
+                                       "pm6-3":  {
+                                                     "id":  "pm6-3",
+                                                     "code":  "EDU012M",
+                                                     "name":  "Práctica 2: Educación Media en Matemática",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "EDU011M",
+                                                                     "EDU0300(C)"
+                                                                 ]
+                                                 },
+                                       "pm6-4":  {
+                                                     "id":  "pm6-4",
+                                                     "code":  "FG2",
+                                                     "name":  "Formación General",
+                                                     "credits":  10,
+                                                     "type":  "general",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm7-0":  {
+                                                     "id":  "pm7-0",
+                                                     "code":  "ECM232M",
+                                                     "name":  "Geometría Euclidiana",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT1134",
+                                                                     "MAT2237"
+                                                                 ]
+                                                 },
+                                       "pm7-1":  {
+                                                     "id":  "pm7-1",
+                                                     "code":  "EDU0163",
+                                                     "name":  "Evaluación en Educación Media",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm7-2":  {
+                                                     "id":  "pm7-2",
+                                                     "code":  "EDU0301",
+                                                     "name":  "Didáctica de la Geometría y de la Estadística",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "EDU0300"
+                                                                 ]
+                                                 },
+                                       "pm7-3":  {
+                                                     "id":  "pm7-3",
+                                                     "code":  "EDU013M",
+                                                     "name":  "Práctica 3: Educación Media en Matemática",
+                                                     "credits":  15,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "EDU012M",
+                                                                     "EDU0301(C)"
+                                                                 ]
+                                                 },
+                                       "pm8-0":  {
+                                                     "id":  "pm8-0",
+                                                     "code":  "ECM409M",
+                                                     "name":  "Seminario de Investigación Aplicada a la Enseñanza/Aprendizaje de la Matemática",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm8-1":  {
+                                                     "id":  "pm8-1",
+                                                     "code":  "ECM111M",
+                                                     "name":  "Estadística y Probabilidad",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "MAT1124",
+                                                                     "EYP1610"
+                                                                 ]
+                                                 },
+                                       "pm8-2":  {
+                                                     "id":  "pm8-2",
+                                                     "code":  "EDU0161",
+                                                     "name":  "Gestión de Aulas Heterogéneas",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm8-3":  {
+                                                     "id":  "pm8-3",
+                                                     "code":  "FG3",
+                                                     "name":  "Formación General",
+                                                     "credits":  20,
+                                                     "type":  "general",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm9-0":  {
+                                                     "id":  "pm9-0",
+                                                     "code":  "ECM201M",
+                                                     "name":  "Pensamiento Computacional",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm9-1":  {
+                                                     "id":  "pm9-1",
+                                                     "code":  "EDU0302",
+                                                     "name":  "Didáctica de la Geometría 3D, Análisis y Estadística Inferencial",
+                                                     "credits":  10,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "EDU0301",
+                                                                     "EDU014M(C)"
+                                                                 ]
+                                                 },
+                                       "pm9-2":  {
+                                                     "id":  "pm9-2",
+                                                     "code":  "EDU014M",
+                                                     "name":  "Práctica Profesional 1: Educación Media en Matemática",
+                                                     "credits":  20,
+                                                     "type":  "normal",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+                                                                     "EDU013M",
+                                                                     "EDU0302(C)"
+                                                                 ]
+                                                 },
+                                       "pm9-3":  {
+                                                     "id":  "pm9-3",
+                                                     "code":  "OPT",
+                                                     "name":  "Optativo",
+                                                     "credits":  10,
+                                                     "type":  "general",
+                                                     "completed":  false,
+                                                     "prereqs":  [
+
+                                                                 ]
+                                                 },
+                                       "pm10-0":  {
+                                                      "id":  "pm10-0",
+                                                      "code":  "MAT2006",
+                                                      "name":  "Historia de la Matemática",
+                                                      "credits":  10,
+                                                      "type":  "normal",
+                                                      "completed":  false,
+                                                      "prereqs":  [
+                                                                      "MAT2507",
+                                                                      "MAT2237"
+                                                                  ]
+                                                  },
+                                       "pm10-1":  {
+                                                      "id":  "pm10-1",
+                                                      "code":  "ECM202M",
+                                                      "name":  "Modelación Matemática",
+                                                      "credits":  10,
+                                                      "type":  "normal",
+                                                      "completed":  false,
+                                                      "prereqs":  [
+                                                                      "MAT2507"
+                                                                  ]
+                                                  },
+                                       "pm10-2":  {
+                                                      "id":  "pm10-2",
+                                                      "code":  "EDU015M",
+                                                      "name":  "Práctica Profesional 2: Educación Media en Matemática",
+                                                      "credits":  20,
+                                                      "type":  "normal",
+                                                      "completed":  false,
+                                                      "prereqs":  [
+                                                                      "EDU014M"
+                                                                  ]
+                                                  },
+                                       "pm10-3":  {
+                                                      "id":  "pm10-3",
+                                                      "code":  "EDU556",
+                                                      "name":  "Dimensión Ética de la Profesión Docente",
+                                                      "credits":  5,
+                                                      "type":  "normal",
+                                                      "completed":  false,
+                                                      "prereqs":  [
+
+                                                                  ]
+                                                  }
+                                   },
+                       "semesters":  [
+                                         {
+                                             "id":  "sem-1",
+                                             "title":  "Semestre 1",
+                                             "courseIds":  [
+                                                               "pm1-0",
+                                                               "pm1-1",
+                                                               "pm1-2",
+                                                               "pm1-3",
+                                                               "pm1-4"
+                                                           ]
+                                         },
+                                         {
+                                             "id":  "sem-2",
+                                             "title":  "Semestre 2",
+                                             "courseIds":  [
+                                                               "pm2-0",
+                                                               "pm2-1",
+                                                               "pm2-2",
+                                                               "pm2-3"
+                                                           ]
+                                         },
+                                         {
+                                             "id":  "sem-3",
+                                             "title":  "Semestre 3",
+                                             "courseIds":  [
+                                                               "pm3-0",
+                                                               "pm3-1",
+                                                               "pm3-2",
+                                                               "pm3-3"
+                                                           ]
+                                         },
+                                         {
+                                             "id":  "sem-4",
+                                             "title":  "Semestre 4",
+                                             "courseIds":  [
+                                                               "pm4-0",
+                                                               "pm4-1",
+                                                               "pm4-2",
+                                                               "pm4-3",
+                                                               "pm4-4"
+                                                           ]
+                                         },
+                                         {
+                                             "id":  "sem-5",
+                                             "title":  "Semestre 5",
+                                             "courseIds":  [
+                                                               "pm5-0",
+                                                               "pm5-1",
+                                                               "pm5-2",
+                                                               "pm5-3"
+                                                           ]
+                                         },
+                                         {
+                                             "id":  "sem-6",
+                                             "title":  "Semestre 6",
+                                             "courseIds":  [
+                                                               "pm6-0",
+                                                               "pm6-1",
+                                                               "pm6-2",
+                                                               "pm6-3",
+                                                               "pm6-4"
+                                                           ]
+                                         },
+                                         {
+                                             "id":  "sem-7",
+                                             "title":  "Semestre 7",
+                                             "courseIds":  [
+                                                               "pm7-0",
+                                                               "pm7-1",
+                                                               "pm7-2",
+                                                               "pm7-3"
+                                                           ]
+                                         },
+                                         {
+                                             "id":  "sem-8",
+                                             "title":  "Semestre 8",
+                                             "courseIds":  [
+                                                               "pm8-0",
+                                                               "pm8-1",
+                                                               "pm8-2",
+                                                               "pm8-3"
+                                                           ]
+                                         },
+                                         {
+                                             "id":  "sem-9",
+                                             "title":  "Semestre 9",
+                                             "courseIds":  [
+                                                               "pm9-0",
+                                                               "pm9-1",
+                                                               "pm9-2",
+                                                               "pm9-3"
+                                                           ]
+                                         },
+                                         {
+                                             "id":  "sem-10",
+                                             "title":  "Semestre 10",
+                                             "courseIds":  [
+                                                               "pm10-0",
+                                                               "pm10-1",
+                                                               "pm10-2",
+                                                               "pm10-3"
+                                                           ]
+                                         }
+                                     ],
+                       "semesterOrder":  [
+                                             "sem-1",
+                                             "sem-2",
+                                             "sem-3",
+                                             "sem-4",
+                                             "sem-5",
+                                             "sem-6",
+                                             "sem-7",
+                                             "sem-8",
+                                             "sem-9",
+                                             "sem-10"
+                                         ]
+                   }
 };
 
 let state = {
@@ -770,3 +1730,8 @@ function handleSemesterClickForDelete(semId) {
     render();
   }
 }
+
+
+
+
+
