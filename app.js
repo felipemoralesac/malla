@@ -1140,8 +1140,7 @@ const els = {
   submitBtn: document.querySelector("#courseForm button[type='submit']"),
   zoomOut: document.getElementById("zoomOut"),
   zoomReset: document.getElementById("zoomReset"),
-  zoomIn: document.getElementById("zoomIn"),
-  downloadConfig: document.getElementById("downloadConfig")
+  zoomIn: document.getElementById("zoomIn")
 };
 
 let dragContext = null;
@@ -1229,10 +1228,6 @@ function attachGlobalEvents() {
     state.zoom = Math.max(0.6, +(state.zoom - 0.1).toFixed(2));
     applyZoom();
     persist();
-  });
-
-  els.downloadConfig.addEventListener("click", () => {
-    downloadConfig();
   });
 
   els.statPeriodProgress.addEventListener("click", () => {
